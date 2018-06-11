@@ -7,55 +7,45 @@
 
 
     <EditText
-        android:id="@+id/etFirstName"
+        android:id="@+id/etLastName"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="100dp"
-        android:hint="Date" />
-
-    <EditText
-        android:id="@+id/etLastName"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/etFirstName"
-        android:layout_centerHorizontal="true"
+        android:layout_marginTop="107dp"
         android:hint="Reason" />
 
     <EditText
         android:id="@+id/etFavFood"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/etLastName"
+        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:inputType="numberDecimal"
-        android:hint="Amount" />
+        android:layout_marginTop="166dp"
+        android:hint="Amount"
+        android:inputType="numberDecimal" />
 
     <Button
-        android:layout_marginTop="15dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Add"
         android:id="@+id/btnAdd"
-        android:layout_below="@+id/etFavFood"
-        android:layout_alignParentStart="true" />
-
-    <Button
-        android:layout_marginTop="15dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="View"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:text="Add" />
+
+    <Button
         android:id="@+id/btnView"
-        android:layout_below="@+id/etFavFood"
-        android:layout_alignParentEnd="true" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:text="View" />
 
     <Button
         android:id="@+id/btn_del"
         android:layout_width="111dp"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/btnAdd"
-        android:layout_centerHorizontal="true"
+        android:layout_centerInParent="true"
         android:text="CLear " />
 
     <Button

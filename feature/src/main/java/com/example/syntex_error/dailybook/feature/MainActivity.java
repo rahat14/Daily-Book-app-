@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         etFavFood = (EditText) findViewById(R.id.etFavFood);
-        etFirstName = (EditText) findViewById(R.id.etFirstName);
+        //etFirstName = (EditText) findViewById(R.id.etFirstName);
         etLastName = (EditText) findViewById(R.id.etLastName);
         btnAdd = (Button) findViewById(R.id.btnAdd);
         btnView = (Button) findViewById(R.id.btnView);
@@ -57,14 +57,14 @@ public class MainActivity extends AppCompatActivity {
         btnAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String fName = etFirstName.getText().toString();
+                String fName = getDateTime() ;
                 String lName = etLastName.getText().toString();
                 String fFood = etFavFood.getText().toString();
-                if(fName.length() != 0 && lName.length() != 0 && fFood.length() != 0){
+               if(fName.length() != 0 && lName.length() != 0 && fFood.length() != 0){
                     AddData(fName,lName, fFood);
                     etFavFood.setText("");
-                    etLastName.setText("");
-                    etFirstName.setText("");
+                   etLastName.setText("");
+                    //etFirstName.setText("");
                 }else{
                     Toast.makeText(MainActivity.this,"You must put something in the text field!",Toast.LENGTH_LONG).show();
                 }
@@ -99,6 +99,11 @@ public  void total_money(){
 else
     Toast.makeText(MainActivity.this, "You Have Spent " +total +" Taka  Till NOw " , Toast.LENGTH_LONG).show();
 }
+    public  String getDateTime() {
+
+        String date = String.valueOf(android.text.format.DateFormat.format("dd-MM-yyyy", new java.util.Date()));
+        return  date ;
+    }
 
 
 }
